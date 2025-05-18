@@ -46,4 +46,12 @@
         (canciones[i + 1], canciones[high]) = (canciones[high], canciones[i + 1]);
         return i + 1;
     }
+
+    public void MostrarCancionesDisponibles()
+    {
+        foreach (var cancion in CancionesDisponibles)
+        {
+            Console.WriteLine(cancion.ToString());
+        }
+    }
 }
