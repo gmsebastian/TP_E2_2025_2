@@ -36,5 +36,15 @@
             Console.WriteLine("ERROR: La lista de reproducción no existe.");
         }
     }
-
+    public void MostrarListasReproduccion()
+    {
+        foreach (var lista in ListasReproduccion)
+        {
+            Console.WriteLine($"Lista: {lista.Key}");
+            foreach (var cancion in lista.Value)
+            {
+                cancion.ToString(); // Llama al método ToString de la clase Cancion
+            }
+        }
+    }
 }
