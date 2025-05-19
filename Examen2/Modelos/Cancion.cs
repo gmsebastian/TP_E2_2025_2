@@ -20,6 +20,6 @@
         int minutos = DuracionSegundos / 60;
         int segundos = DuracionSegundos % 60;
         // Devolucion del string
-        return ($"{Nombre} - {Artista} ({minutos}:{segundos})");
+        return ($"\t{Nombre} - {Artista} ({minutos}:{segundos:D2})");
     }
 }

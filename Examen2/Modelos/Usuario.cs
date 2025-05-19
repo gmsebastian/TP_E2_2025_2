@@ -38,12 +38,13 @@
     }
     public void MostrarListasReproduccion()
     {
+        Console.Write("\n");
         foreach (var lista in ListasReproduccion)
         {
             Console.WriteLine($"Lista: {lista.Key}");
             foreach (var cancion in lista.Value)
             {
-                cancion.ToString(); // Llama al método ToString de la clase Cancion
+                Console.WriteLine(cancion.ToString()); // Llama al método ToString de la clase Cancion
             }
         }
     }

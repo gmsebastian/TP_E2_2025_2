@@ -1,7 +1,7 @@
 ﻿public class GestorCanciones
 {
     // Propiedades
-    List<Cancion> CancionesDisponibles { get; set; }
+    public List<Cancion> CancionesDisponibles { get; set; }
 
     // Constructor
     public GestorCanciones()
@@ -53,5 +53,10 @@
         {
             Console.WriteLine(cancion.ToString());
         }
+    }
+    public void CalcularDuracionTotal(List<Cancion> canciones)
+    {
+        int duracionTotal = canciones.Sum(c => c.DuracionSegundos);
+        Console.WriteLine($"Duración total de las canciones: {duracionTotal / 60}:{(duracionTotal % 60):D2}");
     }
 }
