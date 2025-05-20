@@ -28,8 +28,15 @@
     {
         if (ListasReproduccion.ContainsKey(nombreLista)) // Verifica si la lista existe
         {
-            ListasReproduccion[nombreLista].Add(cancion);
-            Console.WriteLine($"Canción '{cancion.Nombre}' agregada a la lista '{nombreLista}'.");
+            try
+            {
+                ListasReproduccion[nombreLista].Add(cancion);
+                Console.WriteLine($"Canción '{cancion.Nombre}' agregada a la lista '{nombreLista}'.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine($"ERROR: cancion no encontrada.");
+            }
         }
         else
         {
